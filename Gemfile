@@ -1,0 +1,15 @@
+source :rubygems
+source 'http://rubygems.org'
+
+gem 'rspec'
+gem 'rspec-rails'
+gem 'capybara', '2.4.4'
+#gem 'capybara-webkit'
+gem 'launchy'
+gem 'selenium-webdriver'
+#gem 'poltergeist'
+gem 'spreadsheet'
+gem 'capybara-screenshot'
+gem 'rest-client'
+gem 'rspec-retry'
+gem 'rspec_junit_formatter'
