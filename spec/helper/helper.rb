@@ -1,6 +1,4 @@
 require '../Avant_Config'
-#require_relative 'LoanPortalConfig'
-require 'spreadsheet'
 
 module AvantConfig
   module Helpers
