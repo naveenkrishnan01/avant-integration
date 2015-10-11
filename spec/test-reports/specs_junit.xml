@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="2" failures="0" errors="0" time="57.988781" timestamp="2015-08-15T16:44:40-07:00">
-  <!-- Randomized with seed 7793 -->
+<testsuite name="rspec" tests="3" failures="0" errors="0" time="21.400916" timestamp="2015-10-10T22:11:28-07:00">
+  <!-- Randomized with seed 30976 -->
   <properties/>
-  <testcase classname="dsc_add_product" name="Dollar shave club product Add two new product" file="./dsc_add_product.rb" time="29.626150"/>
-  <testcase classname="dsc_remove_product" name="Dollar shave club product Remove one product" file="./dsc_remove_product.rb" time="28.361006"/>
+  <testcase classname="home.think.avant-integration.avant.avant_sign_in" name="Signin to Avant  CLick on Signin for exisiting user" file="/home/think/avant-integration/avant/avant_sign_in.rb" time="12.737972"/>
+  <testcase classname="avant_edit_profile" name="Edit prfile  Update personal button" file="./avant_edit_profile.rb" time="2.010225"/>
+  <testcase classname="avant_signup" name="Signup to Avant  CLick on Signup and fill in form" file="./avant_signup.rb" time="6.650659"/>
 </testsuite>

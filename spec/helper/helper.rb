@@ -1,8 +1,8 @@
-require '../Dsc_Config'
+require '../Avant_Config'
 #require_relative 'LoanPortalConfig'
 require 'spreadsheet'
 
-module DscConfig
+module AvantConfig
   module Helpers
 
 
@@ -11,38 +11,54 @@ module DscConfig
       return unix_time
     end
 
-    def click_box
-      find(:css, '.box-indicator').click
+    def click_signup
+      click_link('Sign Up')
     end
 
-    def add_items
-      click_link('Add Some Stuff')
-     # find(:css, ".secondary-cta ember-view").click
+    def click_sign_in
+      click_link('Sign In')
+    end
+   
+    def click_edit_profile
+      click_link('Edit Profile')
+    end
+
+    def fill_in_exist_email(email)
+       @email = email
+       find(:id, 'user_email').set @email
+    end 
+
+    def fill_in_email
+      o = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
+      string = (0...10).map { o[rand(o.length)] }.join
+      @email = "qa" + "avant"+ string+"@yopmail.com"
+      find(:id, 'user_email').set @email
      end
 
-    def shave
-      click_link('Shave')
+
+    def fill_in_password
+      find(:id, 'user_password').set 'hello123' 
     end
 
-    def add_item_1
-      click_link('Bold Hair Gel')
+    def fill_in_password_confirm
+      find(:id, 'user_password_confirmation').set 'hello123'
+    end 
+
+    def submit_signup
+      click_button('Sign up')
     end
 
-    def click_style
-      click_link('Style')
+    def update_personal
+      click_button('Update Personal')
     end
 
-    def click_add_first_button
-      first(:link, 'add').click
+    def submit_login
+      click_button('Log in')
     end
 
-    def click_add_button
-      click_button('Add')
-    end
-
-    def click_ok_button
-      click_button('OK')
-    end       
+    def logout
+       click_link('Sign out')
+    end 
   
   end
 end
